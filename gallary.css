@@ -1,0 +1,95 @@
+#pictures{
+  background-color:#333;
+  height:1250px;
+  display: block;
+  margin-top: -100px;
+}
+
+.pictureRowOne{
+  display: flex;
+  margin-left: 150px;
+  margin-top: 100px;
+  padding-top: 150px;
+}
+.pictureRowTwo{
+  display: flex;
+  margin-left: 150px;
+  padding-top: 10px;
+}
+
+#pictures h{
+  border: 1px solid white;
+  width: 962px;
+  color:white;
+  background: red;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 150px;
+  font-family: impact;
+  font-size: 40px;
+  position: absolute;
+
+}
+#videos{
+  background-color: #333;
+  height: 1800px;
+  align-items: center;
+  padding-top: 20px;
+}
+#videos h{
+  border: 1px solid white;
+  position:relative;
+  width: 962px;
+  color:white;
+  background:red;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 150px;
+  font-family: impact;
+  font-size: 40px;
+  padding-right: 865px;
+}
+#firstVideo{
+  margin-top: 110px;
+}
+.video{
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.citation{
+  margin-left: 150px;
+  background-color: gray;
+  height: 100px;
+  width:1005px;
+  color:white;
+  border: 1px solid white;
+}
+.citation p{
+  font-family: Trebuchet MS;
+  padding:10px;
+}
+
+#gallayContents{
+  overflow: scroll;
+  height: 600px;
+}
+#gallayContents::-webkit-scrollbar {
+  width: 25px;
+  height: 15px;
+  background-color: red;
+}
+
+#gallayContents::-webkit-scrollbar-track {
+border: 10px solid white;
+
+}
+
+#gallayContents::-webkit-scrollbar-thumb {
+  background-color: red;
+  border: 1px;
+}
+
+#gallayContents::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}

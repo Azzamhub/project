@@ -1,0 +1,32 @@
+#contactInfo{
+  padding-left:10px;
+  background-color: #333;
+  color:white;
+  font-family: Trebuchet MS;
+}
+#contactInfo form{
+  padding:10px;
+  text-align: center;
+}
+#textLabel{
+  background-color: gray;
+  padding:7px;
+}
+#email, #phoneNumber, #name{
+  background-color: gray;
+  border: 0px;
+  padding:10px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+#submitButton{
+  background-color: gray;
+  padding:10px;
+  width:120px;
+  margin-top: 15px;
+  margin-left: 30px;
+  color: white;
+}
+#submitButton:hover{
+  background-color: red;
+}

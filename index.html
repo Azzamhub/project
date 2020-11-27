@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type='text/css' href="style.css">
+    <link rel='stylesheet' type='text/css' href='carousel.css'>
+    <script>
+      var slideNumber = 1;
+      var theTimer;
+      var slideshowContainer;
+      window.addEventListener("load",function() {
+          showSlides(slideNumber);
+          Thetimer = setInterval(function(){plusSlides(1)}, 4000);
+
+          slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+          slideshowContainer.addEventListener('mouseenter', pause)
+          slideshowContainer.addEventListener('mouseleave', resume)
+      })
+
+      function plusSlides(n){
+        clearInterval(theTimer);
+        if (n < 0){
+          showSlides(slideNumber -= 1);
+        } else {
+         showSlides(slideNumber += 1);
+        }
+        if (n === -1){
+          theTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+        } else {
+          theTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+        }
+      }
+      function currentSlide(n){
+        clearInterval(theTimer);
+        theTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+        showSlides(slideNumber = n);
+      }
+      function showSlides(n){
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideNumber = 1}
+        if (n < 1) {slideNumber = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideNumber-1].style.display = "block";
+        dots[slideNumber-1].className += " active";
+      }
+      pause = () => {
+        clearInterval(theTimer);
+      }
+      resume = () =>{
+        clearInterval(theTimer);
+        theTimer = setInterval(function(){plusSlides(slideNumber)}, 4000);
+      }
+    </script>
+
+</head>
+<body>
+    <div id='page'>
+      <div ><img src='./images/logo.png' id='logo'/>
+        </div>
+      <header id='header'>
+        <ul id=navigation>
+          <li id='nav_tabs'> <a href='./index.html' id='tabs'>HOME</a></li>
+          <li id='nav_tabs' class='dropDown'>
+            <a href="javascript:void(0)" class='dropbtn' id='tabs'> SERVICE </a>
+            <div class='dropDown_content'>
+              <a href='./serviceOne.html'>Service 1</a>
+              <a href='./serviceTwo.html'>Service 2</a>
+            </div>
+          </li>
+          <li id='nav_tabs'><a href='./about.html' id='tabs'>ABOUT</a> </li>
+            <li id='nav_tabs'><a href='./gallary.html' id='tabs'> GALLARY</a></li>
+          <li  id='contactUs'>
+            <a href='./contact.html' >CONTACT US</a></li>
+        </ul>
+
+      </header>
+    </div>
+
+
+    <div id='contents'>
+      <div id='carousel'>
+        <div class="slideshow-container">
+        <div class="slideshow-inner">
+
+          <div class="mySlides ">
+            <img  src='./images/image1.jpg' id='slideshowPictures'>
+            <div class="text">-----</div>
+          </div>
+
+          <div class="mySlides">
+            <img  src='./images/image2.jpg' id='slideshowPictures'/>
+            <div class="text">---</div>
+          </div>
+
+          </div>
+          <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+          <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+        </div>
+        <br/>
+        <div style='text-align: center;'>
+          <span class="dot" onclick='currentSlide(1)'></span>
+          <span class="dot" onclick='currentSlide(2)'></span>
+        </div>
+      </div>
+
+      <div id='article'>
+        <h2 id='headerBox'>Welcome</h2>
+        <p>
+          Welcome there. This is my first build website; I finally made.
+        </p>
+        <p>
+        <b>One of my favorite websites</b>
+        </p>
+        <ul>
+          <li>
+            freeCodeCamp
+          </li>
+          <li>
+            Khan Academy
+          </li>
+          <li>
+            w3schools
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div id='slidbar'>
+        <h2 id='headerBox'>Slidebar</h2>
+        <p>
+          This is just a simple slidbar. Contents will be added later.
+        </p>
+      </div>
+
+    </div>
+    <div id='footer'>
+      <ul id='followMe'>
+        <li>
+          <a href="https://snapchat.com/azzamus"><img src='./images/snapchat.png' id='followMeLogo'/>
+             snapchat</a>
+        </li>
+        <li> <a href="https://instagram.com/azzamui">
+            <img src="./images/instagram.png" id='followMeLogo'/> Instagram</a>
+        </li>
+      </ul>
+      <ul id='emailMe'>
+        <li> <a href="mailto:azzamalimc2@gmail.com">
+          <img src='./images/gmail.png' id='emailMeLogo' /> Gmail</a></li>
+      </ul>
+    </div>
+
+
+
+
+</body>
+</html>

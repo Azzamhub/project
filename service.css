@@ -1,0 +1,17 @@
+.serviceContent{
+  background-color: #333;
+  padding-top: 50px;
+  height: 200px;
+}
+.serviceContent h{
+  width:1415px;
+  position: absolute;
+  background-color:rgba(201, 97, 97, 0.83);
+  color:white;
+  font-family: Trebuchet MS;
+  font-size: 50px;
+  margin-top: -51px;
+  padding: 50px;
+  text-align: center;
+
+}

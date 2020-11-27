@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type='text/css' href="style.css">
+    <link rel='stylesheet' type='text/css' href='carousel.css'>
+    <link rel='stylesheet' type='text/css' href='contact.css' />
+
+    <!-- <script>
+     // var email = document.getElementById('email').value;
+     // var name  = document.getElementById('name').value;
+     // var phoneNumber = document.getElementById('phoneNumber').value;
+
+      document.addEventListener('DOMContentLoaded', bindButtons);
+      function bindButtons(){
+        // var emailVar = document.getElementById('email').value;
+        //
+        // var nameVar  = document.getElementById('name').value;
+        // var phoneVar = document.getElementById('phoneNumber').value;
+        // console.log('email is :'+emailVar);
+        document.getElementById('submitButton').addEventListener('click', function(event){
+          var emailVar = document.getElementById('email').value;
+          var nameVar  = document.getElementById('name').value;
+          var phoneVar = document.getElementById('phoneNumber').value;
+          console.log('email is :'+emailVar);
+        event.preventDefault();
+        var req = new XMLHttpRequest();
+        req.open("POST","http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php", false);
+        req.setRequestHeader('Content-Type', 'application/json');
+        // req.send('{"name":"userNmae"}');
+        req.send(JSON.stringify({
+            nameVar: name,
+            emailVar: email,
+            phoneVar: phoneNumber
+          }));
+      })};
+    </script> -->
+
+</head>
+
+  <body>
+      <div id='page'>
+        <div ><img src='./images/logo.png' id='logo'/>
+
+          </div>
+        <header id='header'>
+          <ul id=navigation>
+            <li id='nav_tabs'> <a href='./index.html' id='tabs'>HOME</a></li>
+            <li id='nav_tabs' class='dropDown'>
+              <a href="javascript:void(0)" class='dropbtn' id='tabs'> SERVICE </a>
+              <div class='dropDown_content'>
+                <a href='./serviceOne.html'>Service 1</a>
+                <a href='./serviceTwo.html'>Service 2</a>
+              </div>
+            </li>
+            <li id='nav_tabs'><a href='#about' id='tabs'>ABOUT</a> </li>
+            <li id='nav_tabs'><a href='./gallary.html' id='tabs'> GALLARY</a></li>
+            <li  id='contactUs'>
+              <a href='#contactUs' >CONTACT US</a></li>
+          </ul>
+
+        </header>
+      </div>
+      <div id='contactInfo'>
+        <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="POST">
+          <fieldset>
+            <legend>
+              CONTACT INFO
+            </legend>
+            <span id='textLabel'><label for='name' id='textLabel'>Name</label></span>
+            <input type='text' id='name' name='name' /> <br/>
+
+            <span id='textLabel'><label for='email'>Email</label></span>
+            <input type='email' id='email' name='email' /> <br />
+
+            <spanid='textLabel'><label for='phoneNumber' id='textLabel'>Phone number</label>
+          </span><input type='number' id='phoneNumber' name='phoneNumber' />
+            <br />
+            <input type='submit' id='submitButton' value='SUBMIT' />
+          </fieldset>
+          </form>
+      </div>
+
+
+      <div id='footer'>
+        <ul id='followMe'>
+          <li>
+            <a href="https://snapchat.com/azzamus"><img src='./images/snapchat.png' id='followMeLogo'/>
+               snapchat</a>
+          </li>
+          <li> <a href="https://instagram.com/azzamui">
+              <img src="./images/instagram.png" id='followMeLogo'/> Instagram</a>
+          </li>
+        </ul>
+        <ul id='emailMe'>
+          <li> <a href="mailto:azzamalimc2@gmail.com">
+            <img src='./images/gmail.png' id='emailMeLogo' /> Gmail</a></li>
+        </ul>
+      </div>
+
+
+
+
+  </body>
+</html>
